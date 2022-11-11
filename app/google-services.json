@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "323316692458",
+    "firebase_url": "https://esal-e-sawab-for-maha-default-rtdb.firebaseio.com",
+    "project_id": "esal-e-sawab-for-maha",
+    "storage_bucket": "esal-e-sawab-for-maha.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323316692458:android:be98d51e88602ee3abae93",
+        "android_client_info": {
+          "package_name": "com.nyen.User.esalesawab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323316692458-5nsb4msfrcj8m2lp4mp2tchd11u2koke.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nyen.User.esalesawab",
+            "certificate_hash": "979433d9a0c90e7e96f3ae4fba60d0de4c414506"
+          }
+        },
+        {
+          "client_id": "323316692458-nhbab02p1co1mdlkjfan9ru8g3qo195f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nyen.User.esalesawab",
+            "certificate_hash": "dd7debc3b381fd888d924feba2928ad0f5f343df"
+          }
+        },
+        {
+          "client_id": "323316692458-g8565acu5c0iqsics03j3leequpapjl8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABB8OhYyU4EX5F1elkUbPhRNOKwcqBLj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323316692458-g8565acu5c0iqsics03j3leequpapjl8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323316692458:android:b07420392de71938abae93",
+        "android_client_info": {
+          "package_name": "com.nyen.admin.esalesawab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323316692458-9vh76bh290v53bqd30v3kg197djj3fgt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nyen.admin.esalesawab",
+            "certificate_hash": "979433d9a0c90e7e96f3ae4fba60d0de4c414506"
+          }
+        },
+        {
+          "client_id": "323316692458-g8565acu5c0iqsics03j3leequpapjl8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABB8OhYyU4EX5F1elkUbPhRNOKwcqBLj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323316692458-g8565acu5c0iqsics03j3leequpapjl8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Esal e Sawab</string>
+
+
+    <!--Main Menu-->
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_task">Task</string>
+
+    <!--Dashboard-->
+    <string name="coins">Coins</string>
+    <string name="view_history">View History</string>
+    <string name="edit">Edit</string>
+    <string name="Sorah_Yaseen">Sorah Yaseen</string>
+    <string name="task_completed">Task Completed</string>
+    <string name="_18_41">(18/41)</string>
+    <string name="_100">100</string>
+    <string name="accept">Accept</string>
+    <string name="firstWithdrawBtn">200 Coins</string>
+    <string name="personal">Personal</string>
+    <string name="marhomeen_list">Marhomeen List</string>
+    <string name="add">Add</string>
+
+    <string name="mobile_load">Mobile Load</string>
+    <string name="share_with_friends">Share with Friends</string>
+    <string name="_863_265_963">863–265–963</string>
+    <string name="invite_to_friend_desc">Share this code with your friends and family and earn 100 coins on each friend you invited.</string>
+    <string name="code">Code</string>
+    <string name="invalid_code">Invalid code</string>
+    <string name="redeem">Redeem</string>
+    <string name="copy">Copy</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="otp">OTP</string>
+    <string name="add_marhoom">Add Marhoom</string>
+    <string name="all">All</string>
+    <string name="accepted">Accepted</string>
+    <string name="refresh">Refresh</string>
+    <string name="points_history">Points History</string>
+    <string name="person">Person</string>
+    <string name="not_available">Not available</string>
+    <string name="pending_withdraw">Pending Withdraw</string>
+    <string name="payment_image">payment Image</string>
+    <string name="p1_image">P1 Image</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_transaction">No Transaction</string>
+    <string name="sorah_yaseen">Sorah Yaseen</string>
+
+    <!--TODO: Change application ID.-->
+    <string name="admob_application_id">ca-app-pub-1001585373006833~6318752992</string>
+    <string name="requester_name">Requester Name</string>
+    <string name="points_200">Points: 200</string>
+    <string name="marhoom">Marhoom</string>
+    <string name="quantity">Quantity</string>
+    <string name="transaction_id">Transaction_ID</string>
+
+    <string name="step_6">Step 6: And Wait for Approval</string>
+    <string name="step_5">Step 5: Click On Buy Now Button.</string>
+    <string name="step_4">Step 4: Input Transaction Id.</string>
+    <string name="step_3">Step 3: Input MCB or EasyPaisa in Bank or Wallet Name  </string>
+    <string name="step_2">Step 2: Deposit fund</string>
+    <string name="step_1">Step 1: Select One Account from above.</string>
+    <string name="easypaisa">EasyPaisa</string>
+    <string name="hassnain_shabbir">Hassnain Shabbir</string>
+    <string name="how_to_deposit_fund">How to Deposit Fund:</string>
+    <string name="need_more_help_whatsapp_03027860317">Need more help? WhatsApp 03027860317</string>
+    <string name="_03027860317">03027860317</string>
+    <string name="claim">Claim</string>
+
+
+</resources>

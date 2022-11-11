@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nyen.User.esalesawab">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EsalESawab"
+        tools:ignore="AllowBackup">
+        <activity
+            android:name=".Help.NeedHelp"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Fund.BuyNow"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Task.MyTaskDetail"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Task.AddEsaleSawabRequest"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Task.AcceptedTask"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Fund.PendingWithdraw"
+            android:exported="false"
+            android:label="Pending Withdraw" />
+        <activity
+            android:name=".UI.Registration.ReferralList"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Task.MyTask"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Fund.Withdraw"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Fund.PlayStore"
+            android:exported="false"
+            android:label="Play Store" />
+        <activity
+            android:name=".UI.Fund.Store"
+            android:exported="false"
+            android:label="Local Store"
+            android:theme="@style/Theme.EsalESawab.NoActionBar"/>
+        <activity
+            android:name=".UI.Task.AddArticles"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Profile.AddMarhoom"
+            android:label="Add Marhoom"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Fund.ViewPointsHistory"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Rewards.DailyRewards"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Profile.Profile"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Registration.UpdateAppNow"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Registration.Invite"
+            android:exported="false"
+            android:theme="@style/Theme.EsalESawab.NoActionBar" />
+        <activity
+            android:name=".UI.Registration.SignIn"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".FCM.MyFirebaseInstanceIDService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service> <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_application_id" />
+    </application>
+
+</manifest>

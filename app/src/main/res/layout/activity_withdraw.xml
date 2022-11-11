@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Fund.Withdraw">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="160dp">
+
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/mAdview8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible"
+            app:adSize="MEDIUM_RECTANGLE"
+            app:adUnitId="ca-app-pub-1001585373006833/6362985025"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="540dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/background_bottom" />
+
+        <Button
+            android:id="@+id/withdrawFirstBtn"
+            android:layout_width="160dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/bg_withdraw"
+            android:padding="4dp"
+            android:text="@string/firstWithdrawBtn"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/withdrawSecondBtn"
+            android:layout_width="160dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/bg_withdraw"
+            android:padding="4dp"
+            android:text="500 Coins"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/withdrawFirstBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/withdrawFourthBtn"
+            android:layout_width="160dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_withdraw"
+            android:padding="4dp"
+            android:text="2000 Coins"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/withdrawFirstBtn"
+            app:layout_constraintTop_toBottomOf="@+id/withdrawSecondBtn" />
+
+        <Button
+            android:id="@+id/withdrawThirdBtn"
+            android:layout_width="160dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_withdraw"
+            android:padding="4dp"
+            android:text="1000 Coins"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/withdrawFirstBtn" />
+
+        <Button
+            android:id="@+id/withdrawFifthBtn"
+            android:layout_width="160dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_withdraw"
+            android:padding="4dp"
+            android:text="1000 Coins"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/withdrawThirdBtn" />
+
+        <Button
+            android:id="@+id/withdrawSixthBtn"
+            android:layout_width="160dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_withdraw"
+            android:padding="4dp"
+            android:text="1000 Coins"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/withdrawFirstBtn"
+            app:layout_constraintTop_toBottomOf="@+id/withdrawFourthBtn" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="Jazz Cash"
+            android:textAlignment="center"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Note: higher coins will cost lower service charges. \n 40%, 30%, 20%, 10%, 5%, 2% Respectively"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnPendingWithdraw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/pending_withdraw"
+            android:textColor="@color/WhiteSmoke"
+            android:backgroundTint="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/withdrawSixthBtn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

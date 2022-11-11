@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-v24/gradient_spinner.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-v24/ic_baseline_assignment_24.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-v24/ic_baseline_content_copy_24.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-v24/ic_baseline_edit_24.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-v24/ic_baseline_person_add_24.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-v24/ic_baseline_system_update_24.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-v24/ic_dashboard_black_24dp.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-v24/ic_dollar.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-v24/ic_home_black_24dp.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-v24/ic_mobile_load.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xhdpi/ic_baseline_my_task_24.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xhdpi/ic_baseline_people_outline_24.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xhdpi/ic_baseline_person_24.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xhdpi/ic_baseline_refresh_24.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xhdpi/ic_baseline_share_24.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xxhdpi/background_bottom.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xxhdpi/background_pink.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xxhdpi/bg_withdraw.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xxhdpi/easypaisa.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xxhdpi/ic_baseline_arrow_forward_ios_24.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xxhdpi/ic_baseline_assignment_24_white.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xxhdpi/ic_baseline_shopping_cart_24.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xxhdpi/mcb_bank_logo.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xxhdpi/outline_check_circle_24.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xxhdpi/outline_payments_24.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/drawable-xxhdpi/tab_indicator.xml" value="0.29635416666666664" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/font/roboto_condensed_bold.xml" value="0.17916666666666667" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_accepted_task.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_add_articles.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_add_esale_sawab_request.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_add_marhoom.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_buy_now.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_daily_rewards.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_invite.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_main.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_my_task.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_my_task_detail.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_need_help.xml" value="0.2671875" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_pending_withdraw.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_play_store.xml" value="0.14791666666666667" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_profile.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_referral_list.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_sign_in.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_store.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_update_app_now.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_view_points_history.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/activity_withdraw.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/article_model_list.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/daily_reward_model_list.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/fragment_dashboard.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/fragment_home.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/fragment_local_store.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/fragment_notifications.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/fragment_purchase_history_local.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/loading_layout.xml" value="0.14895833333333333" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/marhomeenmodellist.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/my_task_receiter_name_model_list.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/pending_withdraw_list_model.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/pendingdepositmodellist.xml" value="0.27589743589743587" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/product_list_model.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/product_trx_list_model.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/referral_list_model.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/request_modellist.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/layout/view_points_history_model_list.xml" value="0.28020833333333334" />
+        <entry key="..\:/Andoid/EsaleSawab/app/src/main/res/menu/bottom_nav_menu.xml" value="0.28020833333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

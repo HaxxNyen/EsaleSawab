@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:end="2dp"
+        android:start="2dp"
+        android:bottom="12dp"
+        android:top="12dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="200dp" />
+            <solid android:color="@color/tab_indicator_color" />
+        </shape>
+    </item>
+</layer-list>
