@@ -156,6 +156,7 @@ public class Invite extends AppCompatActivity implements View.OnClickListener {
                                         "Bonus on inviting to " + sharedPref.getStr(Cons.USER_NAME) + " By " + getCode(),
                                         bonusRedemption.getUserid(), Cons.REFERALL_BONUS,addBonusListener);
 
+
                             }
                         }
                     } else {

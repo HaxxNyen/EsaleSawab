@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.nyen.User.esalesawab">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -16,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EsalESawab"
         tools:ignore="AllowBackup">
+        <activity
+            android:name=".UI.Registration.Premium"
+            android:exported="false" />
         <activity
             android:name=".Help.NeedHelp"
             android:exported="false" />
@@ -52,17 +56,18 @@
             android:name=".UI.Fund.Store"
             android:exported="false"
             android:label="Local Store"
-            android:theme="@style/Theme.EsalESawab.NoActionBar"/>
+            android:theme="@style/Theme.EsalESawab.NoActionBar" />
         <activity
             android:name=".UI.Task.AddArticles"
             android:exported="false" />
         <activity
             android:name=".UI.Profile.AddMarhoom"
-            android:label="Add Marhoom"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Add Marhoom" />
         <activity
             android:name=".UI.Fund.ViewPointsHistory"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Point History" />
         <activity
             android:name=".UI.Rewards.DailyRewards"
             android:exported="false" />
@@ -91,7 +96,7 @@
 
         <service
             android:name=".FCM.MyFirebaseInstanceIDService"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>

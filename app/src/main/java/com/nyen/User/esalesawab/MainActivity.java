@@ -9,10 +9,14 @@ import androidx.navigation.ui.NavigationUI;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.nyen.User.esalesawab.Database.FireBaseHelper;
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private final Context context =MainActivity.this;
     private RewardedAd mRewardedAd;
     private FireBaseHelper mDataBaseRef;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
 
     @Override
@@ -44,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 .setRatingThreshold(RatingThreshold.FOUR)
                 .useGoogleInAppReview()
                 .showIfMeetsConditions();
+
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
 
         mDataBaseRef = new FireBaseHelper(context);
         if (new AppUpdate(context).getUpdateAvailable()){

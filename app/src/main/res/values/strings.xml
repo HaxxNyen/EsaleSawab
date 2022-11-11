@@ -62,12 +62,25 @@
     <string name="step_3">Step 3: Input MCB or EasyPaisa in Bank or Wallet Name  </string>
     <string name="step_2">Step 2: Deposit fund</string>
     <string name="step_1">Step 1: Select One Account from above.</string>
-    <string name="easypaisa">EasyPaisa</string>
+    <string name="easy_paisa">EasyPaisa</string>
     <string name="hassnain_shabbir">Hassnain Shabbir</string>
     <string name="how_to_deposit_fund">How to Deposit Fund:</string>
     <string name="need_more_help_whatsapp_03027860317">Need more help? WhatsApp 03027860317</string>
     <string name="_03027860317">03027860317</string>
     <string name="claim">Claim</string>
+
+
+
+
+    <!--Premium Activity-->
+    <string name="premium_title">Get Premium Version</string>
+    <string name="premium_feature_1">Accept 10 Task each day</string>
+    <string name="premium_feature_2">Remove Ads</string>
+    <string name="premium_feature_3">5 Video Ads each day  </string>
+    <string name="premium_feature_4">2</string>
+    <string name="premium_feature_5">3</string>
+    <string name="premium_feature_6">4</string>
+
 
 
 </resources>

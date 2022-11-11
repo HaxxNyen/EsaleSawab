@@ -24,6 +24,8 @@ import com.nyen.User.esalesawab.Utils.Cons;
 import com.nyen.User.esalesawab.Utils.SharedPref;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
@@ -35,16 +37,6 @@ public class CustomAdapterESRList extends BaseAdapter {
 
     private FireBaseHelper mDataBaseRef;
     private SharedPref sharedPref;
-    private String total;
-    private String mAcceptedUnit;
-    private String ESRAcceptedId;
-
-
-
-
-    private String name;
-    private String finished;
-    private String coins;
 
 
     public CustomAdapterESRList(Context context, ArrayList<EsaleSawabRequest> ESRModelArrayList) {
@@ -58,13 +50,8 @@ public class CustomAdapterESRList extends BaseAdapter {
 
 
 
-    public String getESRAcceptedId() {
-        return ESRAcceptedId;
-    }
 
-    public void setESRAcceptedId(String ESRAcceptedId) {
-        this.ESRAcceptedId = ESRAcceptedId;
-    }
+
 
     @Override
     public int getCount() {
@@ -95,12 +82,12 @@ public class CustomAdapterESRList extends BaseAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.request_modellist, null, true);
 
-            holder.ESRListModelTitle = (TextView) convertView.findViewById(R.id.ESRListModelTtile);
-            holder.tvESRCoins = (TextView) convertView.findViewById(R.id.tvESRCoins);
-            holder.tvESRTotalAndFinishedUnit = (TextView) convertView.findViewById(R.id.tvESRTotalandFinishedUnit);
-            holder.EsrProgressBar = (ProgressBar) convertView.findViewById(R.id.ESRprogressBar);
-            holder.btnAcceptedEsr = (Button) convertView.findViewById(R.id.btnAcceptedEsr);
-            holder.MarhoomListModelTaskAcceptedList = (TextView) convertView.findViewById(R.id.MarhoomListModelTaskAcceptedList);
+            holder.ESRListModelTitle = convertView.findViewById(R.id.ESRListModelTtile);
+            holder.tvESRCoins = convertView.findViewById(R.id.tvESRCoins);
+            holder.tvESRTotalAndFinishedUnit = convertView.findViewById(R.id.tvESRTotalandFinishedUnit);
+            holder.EsrProgressBar = convertView.findViewById(R.id.ESRprogressBar);
+            holder.btnAcceptedEsr = convertView.findViewById(R.id.btnAcceptedEsr);
+            holder.MarhoomListModelTaskAcceptedList = convertView.findViewById(R.id.MarhoomListModelTaskAcceptedList);
 
             convertView.setTag(holder);
         }else {
@@ -108,13 +95,12 @@ public class CustomAdapterESRList extends BaseAdapter {
             holder = (CustomAdapterESRList.ViewHolder)convertView.getTag();
         }
         if (esaleSawabRequestModelArrayList.size()>0) {
-            name = esaleSawabRequestModelArrayList.get(position).getEsrname();
+            String name = esaleSawabRequestModelArrayList.get(position).getEsrname();
             holder.ESRListModelTitle.setText(name);
-            coins = esaleSawabRequestModelArrayList.get(position).getReward();
+            String coins = esaleSawabRequestModelArrayList.get(position).getReward();
             holder.tvESRCoins.setText(coins);
-            total = esaleSawabRequestModelArrayList.get(position).getTotalUnit();
-            mAcceptedUnit = esaleSawabRequestModelArrayList.get(position).getAcceptedUnit();
-            finished = esaleSawabRequestModelArrayList.get(position).getFinishedUnit();
+            String total = esaleSawabRequestModelArrayList.get(position).getTotalUnit();
+            String mAcceptedUnit = esaleSawabRequestModelArrayList.get(position).getAcceptedUnit();
             holder.EsrProgressBar.setMax(Integer.parseInt(total));
 
                 holder.tvESRTotalAndFinishedUnit.setText(mAcceptedUnit + "/" + total);
@@ -123,26 +109,22 @@ public class CustomAdapterESRList extends BaseAdapter {
                 holder.btnAcceptedEsr.setText("Accept ");
 
         }
-      holder.btnAcceptedEsr.setOnClickListener(v -> {
-
-          AddAcceptedESR(esaleSawabRequestModelArrayList.get(position).getId(), position, Integer.parseInt(esaleSawabRequestModelArrayList.get(position).getAcceptedUnit()));
-
-        });
+      holder.btnAcceptedEsr.setOnClickListener(v -> AddAcceptedESR(esaleSawabRequestModelArrayList.get(position).getId(), position, Integer.parseInt(esaleSawabRequestModelArrayList.get(position).getAcceptedUnit()),esaleSawabRequestModelArrayList.get(position).getTotalUnit()));
         return convertView;
     }
 
 
 
-    public void AddAcceptedESR(String ESRID, int position, int acceptedUnit){
+    public void AddAcceptedESR(String ESRID, int position, int acceptedUnit, String total){
 
-        mDataBaseRef.ShowLog("adAcpeted mein "+ acceptedUnit);
+        mDataBaseRef.ShowLog("adAccepted mein "+ acceptedUnit);
         mDataBaseRef.showLoading();
         sharedPref = new SharedPref(context);
         mDataBaseRef.getAcceptedESRRef().orderByChild("statusAndByUser").equalTo("Accepted"+sharedPref.getStr(Cons.USER_ID)).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (!snapshot.exists()){
-                    addAcceptedESR(ESRID, position, acceptedUnit);
+                    addAcceptedESR(ESRID, position, acceptedUnit, total);
 
                 }else {
                     new SweetAlertDialog(context, SweetAlertDialog.WARNING_TYPE)
@@ -161,25 +143,28 @@ public class CustomAdapterESRList extends BaseAdapter {
         });
     }
 
-    private void addAcceptedESR(String ESRID, int position, int acceptedUnit) {
-        mDataBaseRef.ShowLog("adAcpeted mein ESR mein "+ acceptedUnit);
+    private void addAcceptedESR(String ESRID, int position, int acceptedUnit, String total) {
+        Map<String, Object> childUpdateForAcceptedESR = new HashMap<>();
+
+        mDataBaseRef.ShowLog("adAccepted mein ESR mein "+ acceptedUnit);
         if (!(acceptedUnit >= Integer.parseInt(total))){
             String key = mDataBaseRef.getAcceptedESRRef().push().getKey();
-            AcceptedESR acceptedESR1 = new AcceptedESR(key,ESRID,"Accepted",sharedPref.getStr(Cons.USER_ID),sharedPref.getStr(Cons.USER_NAME),"Accepted"+sharedPref.getStr(Cons.USER_ID),System.currentTimeMillis());
+
+            AcceptedESR acceptedESR1 = new AcceptedESR(key,ESRID,"Accepted",sharedPref.getStr(Cons.USER_ID),
+                    sharedPref.getStr(Cons.USER_NAME),"Accepted"+sharedPref.getStr(Cons.USER_ID),System.currentTimeMillis());
+
             assert key != null;
             mDataBaseRef.ShowLog(String.valueOf(acceptedUnit));
             int finalAcceptedUnit = acceptedUnit + 1;
-            mDataBaseRef.getAcceptedESRRef().child(key).setValue(acceptedESR1).addOnCompleteListener(task -> {
-                Toast.makeText(context, "Added Successfully.", Toast.LENGTH_SHORT).show();
+            childUpdateForAcceptedESR.put("/AcceptedESR/"+key , acceptedESR1);
+            childUpdateForAcceptedESR.put("/EsaleSawabRequest/"+ESRID+"/acceptedUnit" , String.valueOf(finalAcceptedUnit));
+            mDataBaseRef.setChildrenQuery(childUpdateForAcceptedESR, "Added Successfully.");
+            mDataBaseRef.hideLoading();
 
-                mDataBaseRef.hideLoading();
-
-                mDataBaseRef.ShowLog(String.valueOf(finalAcceptedUnit));
-
-                mDataBaseRef.getEsaleSawabRequestRef().child(ESRID).child("acceptedUnit").setValue(String.valueOf(finalAcceptedUnit));
-                esaleSawabRequestModelArrayList.remove(position);
-                notifyDataSetChanged();
-            });
+            //TODO:Log Remove after final Output
+            mDataBaseRef.ShowLog(String.valueOf(finalAcceptedUnit));
+            esaleSawabRequestModelArrayList.remove(position);
+            notifyDataSetChanged();
 
         } else {
             Toast.makeText(context, "Sorry! already task assign to many users.", Toast.LENGTH_SHORT).show();

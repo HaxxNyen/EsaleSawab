@@ -133,12 +133,17 @@ public class FireBaseHelper {
 
             //Add Coins to User account.
 
+            ShowLog("xyz-before coins add"+sharedPref.getInt(Cons.COINS));
             coinsOfUser = sharedPref.getInt(Cons.COINS) + requestCoins;
+            ShowLog("xyz-before++ coins add"+sharedPref.getInt(Cons.COINS));
 
             childUpdate.put("/Users/" + sharedPref.getStr(Cons.USER_ID) + "/coins", coinsOfUser);
 
+
             //Subtract Coins from Admin account.
+            ShowLog("xyz-before coins add"+sharedPref.getInt(Cons.ADMIN_COINS));
             coinsOfAdmin = sharedPref.getInt(Cons.ADMIN_COINS) - requestCoins;
+            ShowLog("xyz-before++ coins add"+sharedPref.getInt(Cons.ADMIN_COINS));
             childUpdate.put("/Users/" + sharedPref.getStr(Cons.ADMIN_ID) + "/coins", coinsOfAdmin);
 
 
@@ -176,6 +181,8 @@ public class FireBaseHelper {
             if (task.isSuccessful()) {
                 sharedPref.setInt(Cons.COINS, coinsOfUser);
                 sharedPref.setInt(Cons.ADMIN_COINS, coinsOfAdmin);
+                ShowLog("xyz-after coins add"+sharedPref.getInt(Cons.COINS));
+                ShowLog("xyz-after coins add"+sharedPref.getInt(Cons.ADMIN_COINS));
                 ShowToast(msg);
                 ShowLog(msg);
             } else {
@@ -187,10 +194,27 @@ public class FireBaseHelper {
 
 
     }
+
+
     //Ended XYZ func()
+
+    public void setChildrenQuery(Map<String, Object> childUpdate1, String msg){
+        databaseReference.updateChildren(childUpdate1).addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                ShowLog("setChildrenQuery-after++ coins add"+sharedPref.getInt(Cons.COINS));
+                ShowLog("setChildrenQuery-after++ coins add"+sharedPref.getInt(Cons.ADMIN_COINS));
+                ShowToast(msg);
+                ShowLog(msg);
+            } else {
+                ShowToast("Something wrong");
+                ShowLog("Something wrong");
+            }
+        });
+    }
 
     public void mAddReferralBonus(String DescriptionDr, String DescriptionCr, String id, int requestCoins, AddBonusListener addBonusListener) {
 
+        ShowLog("Referal bonus started");
 
         getUsersRef().orderByChild("uid").equalTo(id).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -202,6 +226,7 @@ public class FireBaseHelper {
 
                         assert user != null;
                         coinsOfUser = requestCoins + user.getCoins();
+                        ShowLog("Coins of user "+coinsOfUser);
                     }
 
 
@@ -221,11 +246,14 @@ public class FireBaseHelper {
                     childUpdate.put("/FundTransfer/" + Key, fundTransferCR);
 
                     //Add Coins to User Referrer account.
-                    childUpdate.put("/Users/" + sharedPref.getStr(Cons.USER_ID) + "/coins", coinsOfUser);
+                    childUpdate.put("/Users/"+id+"/coins", coinsOfUser);
+
 
                     //Subtract Coins from Admin account.
                     coinsOfAdmin = sharedPref.getInt(Cons.ADMIN_COINS) - requestCoins;
                     childUpdate.put("/Users/" + sharedPref.getStr(Cons.ADMIN_ID) + "/coins", coinsOfAdmin);
+
+                    ShowLog("Coins of user after updated in childupdate "+ childUpdate.get("/Users/" + sharedPref.getStr(Cons.ADMIN_ID) + "/coins"));
 
                     //Update status that User redeemed bonus.
                     childUpdate.put("/BonusRedemption/" + sharedPref.getStr(Cons.USER_CODE_KEY) + "/status", true);
@@ -248,12 +276,14 @@ public class FireBaseHelper {
 
                 } else {
                     Toast.makeText(context, "Sorry User id not exist", Toast.LENGTH_SHORT).show();
+                    ShowLog("Sorry User id not exist");
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(context, "On Error: " + error, Toast.LENGTH_SHORT).show();
+                ShowLog("On Error: " + error);
 
             }
         });

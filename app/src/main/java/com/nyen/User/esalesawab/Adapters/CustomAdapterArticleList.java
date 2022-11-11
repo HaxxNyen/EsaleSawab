@@ -11,7 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.nyen.User.esalesawab.Database.FireBaseHelper;
+import com.nyen.User.esalesawab.Model.Articles;
 import com.nyen.User.esalesawab.R;
+import com.nyen.User.esalesawab.UI.Task.AddEsaleSawabRequest;
 
 
 import java.util.ArrayList;
